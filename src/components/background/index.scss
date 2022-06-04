@@ -1,0 +1,56 @@
+.background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 1900px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.background__blue,
+.background__red {
+  position: absolute;
+  height: 10px;
+  opacity: 0.1;
+  -webkit-transform: rotate(-18deg);
+  transform: rotate(-18deg);
+}
+
+.background__blue {
+  top: 100px;
+  left: -30px;
+  width: 800px;
+  background-color: #6fcbdd;
+}
+
+.background__red {
+  top: 170px;
+  left: -50px;
+  width: 1250px;
+  background-color: #e11665;
+}
+
+.background__green {
+  left: 320px;
+  background-color: #38ba91;
+}
+
+.background__green,
+.background__yellow {
+  position: absolute;
+  top: -100px;
+  width: 10px;
+  height: 2100px;
+  opacity: 0.1;
+  -webkit-transform: rotate(-18deg);
+  transform: rotate(-18deg);
+}
+
+.background__yellow {
+  left: 450px;
+  background-color: #eaa822;
+}

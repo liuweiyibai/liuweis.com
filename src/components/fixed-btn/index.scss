@@ -1,0 +1,15 @@
+.fixed-btn {
+  position: fixed;
+  right: 3rem;
+  bottom: 1rem;
+  display: inline-block;
+  font-size: 2.3em;
+}
+
+.light .fixed-btn {
+  color: #282c35;
+}
+
+.dark .fixed-btn {
+  color: #fff;
+}
