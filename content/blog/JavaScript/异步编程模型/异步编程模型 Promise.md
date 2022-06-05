@@ -36,4 +36,17 @@ then 的返回值也是一个 promise
 ## 基于 Promise 规范实现
 
 ```js
+const PENDING = "pending"
+const FULFILLED = "fulfilled"
+const REJECTED = "rejected"
+
+class Promise {
+  constructor() {
+    // 状态初始化
+    this.status = PENDING
+    this.value = null
+    this.reason = null
+  }
+  then(on) {}
+}
 ```
