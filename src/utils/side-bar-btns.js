@@ -2,11 +2,11 @@ class SideBarBtns {
   /** Used to register the scroll event handler */
   Initialize() {
     /** When the user scrolls down 300px from the top of the document, show the buttons */
-    window.addEventListener('scroll', this.ToggleButtons)
+    window.addEventListener("scroll", this.ToggleButtons)
     /** Event handler for scroll to top button */
     document
-      .getElementById('scroll-btn')
-      .addEventListener('click', this.ScrollToTop)
+      .getElementById("scroll-btn")
+      .addEventListener("click", this.ScrollToTop)
   }
 
   /** Displays/Hides the buttons */
@@ -17,10 +17,10 @@ class SideBarBtns {
       document.documentElement.scrollTop > 300
     ) {
       /** The scroll to top button is displayed */
-      document.getElementById('scroll-btn').style.display = 'block'
+      document.getElementById("scroll-btn").style.display = "block"
     } else {
       /** The scroll to top button is hidden */
-      document.getElementById('scroll-btn').style.display = 'none'
+      document.getElementById("scroll-btn").style.display = "none"
     }
   }
 

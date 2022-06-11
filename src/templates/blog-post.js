@@ -31,9 +31,8 @@ const BlogPost = ({ data, pageContext, location }) => {
   const { disqusShortName, utterances } = comment
   const { title: postTitle, date, thumbnail } = post.frontmatter
   const thumbnailSrc = thumbnail
-    ? `${siteUrl}${thumbnail.childImageSharp.fixed.src}`
+    ? `${thumbnail.childImageSharp.fixed.src}`
     : undefined
-
   return (
     <Layout location={location} title={title}>
       <Head
@@ -43,6 +42,11 @@ const BlogPost = ({ data, pageContext, location }) => {
       />
       <PostTitle title={postTitle} />
       <PostDate date={date} />
+      {thumbnailSrc && (
+        <div className="flex center">
+          <img src={thumbnailSrc} alt="" />
+        </div>
+      )}
       <PostContainer html={post.html} />
       <SocialShare title={postTitle} author={author} />
       <div className="flex end">
