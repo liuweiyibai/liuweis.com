@@ -1,11 +1,17 @@
-class mitt {
-  events: {}
+type EventType = string | symbol
+
+class mitt<Events extends Record<EventType,unknown>> {
+  events: Record<keyof Events,unknown>
+  
+  
   constructor() {
-    this.events = {}
+    // this.events = {}
   }
 
-  emit(key: string) {}
+  // 抛出事件
+  emit(key: EventType) {}
 
+  // 监听事件
   on() {}
 
   once() {}
