@@ -24,7 +24,7 @@ export default function Page(props: PageProps) {
     <Layout>
       <Box paddingY={5}>
         <Container width="narrow">
-          <Heading as="h1">{page.title}</Heading>
+          <Heading as="h1">{page?.title}</Heading>
           <div
             dangerouslySetInnerHTML={{
               __html: page.html,
