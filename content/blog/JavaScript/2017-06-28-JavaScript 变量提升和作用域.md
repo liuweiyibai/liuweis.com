@@ -43,7 +43,7 @@ JavaScript 代码的执行是由 JavaScript 来执行的。JavaScript 解析器�
 
   ```js
   console.log(a) // undefined
-  var a = '1'
+  var a = "1"
   /**
    * 这其中包括：一次提升，两次赋值
    * 预解析阶段会进行提升 提升 var a = undefined
@@ -66,7 +66,7 @@ JavaScript 代码的执行是由 JavaScript 来执行的。JavaScript 解析器�
   alert(a) // 弹出的是下面的 function 的定义声明
   a() // 可以被调用
   function a() {
-    alert('预解析function')
+    alert("预解析function")
   }
   ```
 
@@ -123,3 +123,19 @@ JavaScript 的作用域包括：`全局`和`函数`还有 `eval()` 中
 
 - 作用域链
   由于 JavaScript 的变量都是对象的属性，而该对象可能又是其它对象的属性，而所有的对象都是 `window` 对象的属性，所以这些对象的关系可以看作是一条链 。JavaScript 语言特有的"链式作用域"结构（`chain scope`），子对象会一级一级地向上寻找所有父对象的变量。所以，父对象的所有变量，对子对象都是可见的，反之则不成立。链头就是变量所处的对象，链尾就是 `window` 对象
+
+## JavaScript 解析过程
+
+对于常见编译型语言（例如：Java）来说，编译步骤分为：词法分析->语法分析->语义检查->代码优化和字节码生成。
+
+对于解释型语言（例如 JavaScript）来说，通过词法分析 -> 语法分析 -> 语法树，就可以开始解释执行了。
+
+具体过程：
+
+1. 词法分析是将字符流(char stream)转换为记号流(token stream)
+2. 语法分析成 AST (Abstract Syntax Tree)
+3. 预编译，当 JavaScript 引擎解析脚本时，它会在预编译期对所有声明的变量和函数进行处理！并且是先预声明变量，再预定义函数！
+
+## 变量查找过程
+
+JavaScript 引擎通过作用域链（scope chain）把多个嵌套的作用域串连在一起，并借助这个链条帮助 JavaScript 解释器检索变量的值。这个作用域链相当于一个索引表，并通过编号来存储它们的嵌套关系。当 JavaScript 解释器检索变量的值，会按着这个索引编号进行快速查找，直到找到全局对象（global object）为止，如果没有找到值，则传递一个特殊的 undefined 值。
