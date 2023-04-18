@@ -9,7 +9,7 @@ import {
 import isAbsoluteURL from "is-absolute-url"
 import * as React from "react"
 import * as styles from "./ui.css"
-import { Radii, SpaceTokens } from "../theme.css"
+import { Radii, SpaceTokens } from "../src/theme.css"
 
 export const cx = (...args: (string | undefined)[]) =>
   args.filter(Boolean).join(" ")

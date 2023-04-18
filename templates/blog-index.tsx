@@ -1,6 +1,6 @@
 import * as React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import Layout from "../components/layout"
+import Layout from "../_components/layout"
 import {
   Container,
   FlexList,
@@ -12,9 +12,9 @@ import {
   Kicker,
   Text,
   HomepageImage,
-} from "../components/ui"
+} from "../_components/ui"
 import { BlogAuthor, BlogPost } from "./blog-post"
-import SEOHead from "../components/head"
+import SEOHead from "../_components/head"
 interface PostCardSmallProps {
   slug: string
   image?: HomepageImage

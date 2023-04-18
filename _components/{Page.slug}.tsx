@@ -1,8 +1,8 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import { Container, Box, Heading } from "../components/ui"
-import SEOHead from "../components/head"
+import Layout from "./layout"
+import { Container, Box, Heading } from "./ui"
+import SEOHead from "./head"
 
 interface PageProps {
   data: {
