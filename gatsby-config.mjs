@@ -14,17 +14,17 @@ export default {
     "gatsby-plugin-image",
     "gatsby-transformer-sharp",
 
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        name: "Gatsby Starter Contentful Homepage",
-        short_name: "Gatsby",
-        start_url: "/",
-        background_color: "#ffe491",
-        theme_color: "#004ca3",
-        icon: "src/favicon.png",
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-manifest",
+    //   options: {
+    //     name: "Gatsby Starter Contentful Homepage",
+    //     short_name: "Gatsby",
+    //     start_url: "/",
+    //     background_color: "#ffe491",
+    //     theme_color: "#004ca3",
+    //     icon: "src/favicon.png",
+    //   },
+    // },
 
     {
       resolve: `gatsby-plugin-mdx`,
