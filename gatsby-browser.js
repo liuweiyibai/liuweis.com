@@ -1,5 +1,4 @@
-import "@fontsource/dm-sans"
-import "@fontsource/dm-sans/500.css"
-import "@fontsource/dm-sans/700.css"
-import "@fontsource/dm-mono"
-import "@fontsource/dm-mono/500.css"
+// require("prismjs/themes/prism-solarizedlight.css")
+// require("prismjs/plugins/line-numbers/prism-line-numbers.css")
+// require("prismjs/plugins/command-line/prism-command-line.css")
+// require("prismjs/themes/prism.css")
