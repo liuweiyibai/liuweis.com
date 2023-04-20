@@ -58,7 +58,7 @@ export const codeStyles: ThemeUICSSObject = {
     webkitOverflowScrolling: `touch`,
     borderRadius: `4px`,
     overflow: `hidden`,
-    mx: [0, 0, 0, -3],
+    // mx: [0, 0, 0, -3],
     ".token-line": {
       mx: -3,
       minWidth: `100%`,

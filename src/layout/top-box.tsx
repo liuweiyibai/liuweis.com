@@ -45,6 +45,7 @@ const iconStyle = {
   mt: "11px",
   opacity: 0.6,
   fontSize: "3xl",
+  color: "#fff",
 } as const
 
 const topLineStyle = {
