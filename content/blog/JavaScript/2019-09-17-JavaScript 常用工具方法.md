@@ -1319,7 +1319,6 @@ function doRepeat(func, times, waits) {
 
 ## 字符串常用操作
 
-<https://codepen.io/hotblin/pen/MWwEMpg>
 
 ```js
 String.prototype.trim = function (char, type) {

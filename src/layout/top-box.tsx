@@ -59,6 +59,7 @@ const topLineStyle = {
 
 export const TopBox = ({ title, location, rootPath }) => {
   const isRoot = location.pathname === rootPath
+
   return (
     <React.Fragment>
       <div sx={{ ...topStyle }}>

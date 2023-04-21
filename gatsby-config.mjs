@@ -1,14 +1,18 @@
 import remarkGfm from "remark-gfm"
 import rehypeMetaAsAttributes from "@lekoarts/rehype-meta-as-attributes"
+import metaConfig from "./config/meta.mjs"
 
 export default {
-  siteMetadata: {
-    siteUrl: "https://gatsbycontentfulhomepage.gatsbyjs.io/",
-    title: "Gatsby Contentful Homepage Starter",
-    author: `Gatsby`,
-    description: "A Gatsby Starter for building homepages with Contentful",
-  },
+  siteMetadata: metaConfig,
   plugins: [
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /src/,
+        },
+      },
+    },
     "gatsby-plugin-theme-ui",
     "gatsby-plugin-sharp",
     "gatsby-plugin-image",
@@ -66,8 +70,21 @@ export default {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `./content/blog`,
-        name: `blog`,
+        path: `./content`,
+        name: `content`,
+      },
+    },
+
+    {
+      resolve: "gatsby-plugin-page-progress",
+      options: {
+        includePaths: ["/", { regex: "^/blog" }],
+        excludePaths: ["/blog/beep-beep-lettuce"],
+        height: 8,
+        prependToBody: true,
+        color: `#663399`,
+        footerHeight: 500,
+        headerHeight: 0,
       },
     },
   ],

@@ -1,8 +1,8 @@
-const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
-const { redirectTable } = require("./gatsby-meta-config")
+import path from "path"
+import { createFilePath } from "gatsby-source-filesystem"
+// import { redirectTable } from "./config/meta.mjs"
 
-exports.createPages = ({ graphql, actions }) => {
+export const createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   const blogPostTemplate = path.resolve(`./src/templates/blog-post.tsx`)
 
@@ -10,7 +10,7 @@ exports.createPages = ({ graphql, actions }) => {
     `
       {
         allMdx(
-          limit: 2
+          limit: 1000
           sort: { frontmatter: { date: DESC } }
           filter: { frontmatter: { draft: { eq: false } } }
         ) {
@@ -51,26 +51,26 @@ exports.createPages = ({ graphql, actions }) => {
           slug: post.node.fields.slug,
           previous,
           next,
-          ...post.node.frontmatter
+          ...post.node.frontmatter,
         },
       })
     })
   })
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+export const onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField, createRedirect } = actions
 
-  if (redirectTable) {
-    redirectTable.forEach(({ fromPath, toPath }) =>
-      createRedirect({
-        fromPath,
-        toPath,
-        isPermanent: true,
-        redirectInBrowser: true,
-      })
-    )
-  }
+  // if (redirectTable) {
+  //   redirectTable.forEach(({ fromPath, toPath }) =>
+  //     createRedirect({
+  //       fromPath,
+  //       toPath,
+  //       isPermanent: true,
+  //       redirectInBrowser: true,
+  //     })
+  //   )
+  // }
 
   if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode })

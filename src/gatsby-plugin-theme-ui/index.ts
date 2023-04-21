@@ -28,6 +28,7 @@ const theme = merge(tailwind, {
       rgba(175, 122, 40, 1) 69%,
       rgba(236, 235, 8, 1) 100%
     )`,
+    aBackground: "#ecf0f2",
     ...lightThemeVars,
     modes: {
       dark: {
@@ -40,12 +41,13 @@ const theme = merge(tailwind, {
         divide: tailwind.colors.gray[8],
         muted: tailwind.colors.gray[8],
         highlightLineBg: `rgba(255, 255, 255, 0.1)`,
+        aBackground: "#383636",
         ...darkThemeVars,
       },
     },
   },
   fonts: {
-    body: `'LXGW WenKai Lite', -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"`,
+    body: `'LXGW WenKai', -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"`,
     code: `ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;`,
   },
   styles: {
@@ -66,6 +68,11 @@ const theme = merge(tailwind, {
       "--baseline-multiplier": 0.179,
       "--x-height-multiplier": 0.35,
       wordBreak: `break-word`,
+      a: {
+        background: `linear-gradient(180deg,transparent 70%,rgba(49,184,204,.5) 0)`,
+        color: "inherit",
+        textDecoration: "none",
+      },
     },
     ul: {
       li: {
@@ -214,7 +221,7 @@ const theme = merge(tailwind, {
 
   links: {
     secondary: {
-      color: `secondary`,
+      color: `heading`,
       textDecoration: `none`,
       ":hover": {
         color: `heading`,

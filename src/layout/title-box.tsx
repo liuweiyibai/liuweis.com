@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { Link } from "gatsby"
-import { jsx } from "theme-ui"
+import { jsx, Heading } from "theme-ui"
 
 const TitleBoxStyle = {
   mt: "0",
@@ -9,6 +9,7 @@ const TitleBoxStyle = {
   fontSize: "5xl",
   letterSpacing: "tighter",
   color: `heading`,
+  mb: 4,
   a: {
     color: "inherit",
     textDecoration: "none",
@@ -19,9 +20,9 @@ export const TitleBox = ({ title, location, rootPath }) => {
   const isRoot = location.pathname === rootPath
   return (
     isRoot && (
-      <h1 sx={{ ...TitleBoxStyle }}>
-        <Link to={`/`}>{title}</Link>
-      </h1>
+      <Heading as="h1" variant="styles.h1" sx={TitleBoxStyle}>
+        <Link to="/">{title}</Link>
+      </Heading>
     )
   )
 }
