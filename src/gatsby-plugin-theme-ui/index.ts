@@ -1,6 +1,6 @@
 import { merge, ThemeUIStyleObject } from "theme-ui"
 import tailwind from "@theme-ui/preset-tailwind"
-import { lightThemeVars, darkThemeVars } from "../utils/prism-themes"
+import { lightThemeVars, darkThemeVars } from "../util/prism-themes"
 
 declare module "theme-ui" {
   interface Theme {
@@ -13,7 +13,7 @@ const theme = merge(tailwind, {
     initialColorModeName: `light`,
   },
   colors: {
-    primary: tailwind.colors.purple[7],
+    primary: tailwind.colors.orange[7],
     secondary: `#5f6c80`,
     toggleIcon: tailwind.colors.gray[8],
     heading: tailwind.colors.black,
@@ -33,7 +33,7 @@ const theme = merge(tailwind, {
     modes: {
       dark: {
         text: tailwind.colors.gray[4],
-        primary: tailwind.colors.purple[4],
+        primary: tailwind.colors.orange[4],
         secondary: `#8a9ab0`,
         toggleIcon: tailwind.colors.gray[4],
         background: `#1A202C`,

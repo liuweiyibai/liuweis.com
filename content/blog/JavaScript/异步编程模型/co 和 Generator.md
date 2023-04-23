@@ -3,6 +3,7 @@ title: co 和 Generator
 date: 2021-12-04 10:13:57
 category:
   - JavaScript
+thumbnail: '../../../assets/thumbnails/yarn.png'
 ---
 
 Generator 函数是 ES6 提供的一种异步编程解决方案，整个 Generator 函数就是一个封装的异步任务，或者说是异步任务的容器。异步操作需要暂停的地方，都用 yield 语句注明。

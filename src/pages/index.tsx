@@ -1,4 +1,5 @@
-import * as React from "react"
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import { PageProps, graphql } from "gatsby"
 import Layout from "../layout"
 import BioBox from "../components/bio-box"
@@ -11,6 +12,7 @@ import { useMemo } from "react"
 import _ from "lodash"
 import * as Dom from "../util/dom"
 import * as EventManager from "../util/event-manager"
+import PostList from "../components/post-list"
 
 const BASE_LINE = 80
 function getDistance(currentPos) {
@@ -44,6 +46,7 @@ const IndexPage: React.FC<React.PropsWithChildren<PageProps<any>>> = ({
       triggerCondition: () => isTriggerPos() && doesNeedMore(),
     })()
   })
+
   return (
     <Layout location={location} title={title}>
       <BioBox />
@@ -51,6 +54,13 @@ const IndexPage: React.FC<React.PropsWithChildren<PageProps<any>>> = ({
         categories={categories}
         category={category}
         selectCategory={selectCategory}
+      />
+      <PostList
+        posts={posts}
+        countOfInitialPost={countOfInitialPost}
+        count={count}
+        category={category}
+        sx={{ mt: [4, 5] }}
       />
     </Layout>
   )
@@ -78,6 +88,17 @@ export const pageQuery = graphql`
             title
             date(formatString: "YYYY/MM/DD HH:mm:ss")
             category
+            thumbnail {
+              childImageSharp {
+                gatsbyImageData(
+                  height: 60
+                  width: 60
+                  layout: FIXED
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
+            }
           }
           fields {
             slug

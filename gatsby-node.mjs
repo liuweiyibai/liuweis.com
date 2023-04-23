@@ -1,6 +1,5 @@
 import path from "path"
 import { createFilePath } from "gatsby-source-filesystem"
-// import { redirectTable } from "./config/meta.mjs"
 
 export const createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -59,18 +58,7 @@ export const createPages = ({ graphql, actions }) => {
 }
 
 export const onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField, createRedirect } = actions
-
-  // if (redirectTable) {
-  //   redirectTable.forEach(({ fromPath, toPath }) =>
-  //     createRedirect({
-  //       fromPath,
-  //       toPath,
-  //       isPermanent: true,
-  //       redirectInBrowser: true,
-  //     })
-  //   )
-  // }
+  const { createNodeField } = actions
 
   if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode })

@@ -37,7 +37,7 @@ const CategoryBox = ({ categories, category, selectCategory }) => {
         lineHeight: 0,
         whiteSpace: "nowrap",
         overflowX: "scroll",
-        "-ms-overflow-style": "none", // IE 10+
+        msOverflowStyle: "none", // IE 10+
         overflow: "-moz-scrollbars-none", // Firefox
         zIndex: 1,
         m: 0,
@@ -59,7 +59,7 @@ const CategoryBox = ({ categories, category, selectCategory }) => {
               ">li": {
                 border: " 1px solid rgb(56, 54, 54)",
                 backgroundColor: "#282c35",
-                "-webkit-box-shadow": "0px 1px 1px rgba(255, 255, 255, 0.1)",
+                WebkitBoxShadow: "0px 1px 1px rgba(255, 255, 255, 0.1)",
                 boxShadow: "0px 1px 1px rgba(255, 255, 255, 0.1)",
                 "&[aria-selected='true']": {
                   border: "2px solid #666",
@@ -76,7 +76,7 @@ const CategoryBox = ({ categories, category, selectCategory }) => {
               ">li": {
                 border: " 1px solid #ecf0f2",
                 backgroundColor: "#fff",
-                "-webkit-box-shadow": "0px 1px 1px rgba(0, 0, 0, 0.1)",
+                WebkitBoxShadow: "0px 1px 1px rgba(0, 0, 0, 0.1)",
                 boxShadow: "0px 1px 1px rgba(0, 0, 0, 0.1)",
                 "&[aria-selected='true']": {
                   border: "2px solid #909da1",

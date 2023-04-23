@@ -5,6 +5,7 @@ import metaConfig from "./config/meta.mjs"
 export default {
   siteMetadata: metaConfig,
   plugins: [
+    `gatsby-plugin-sass`,
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

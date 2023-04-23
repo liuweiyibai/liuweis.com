@@ -6,7 +6,7 @@ import {
   GetLanguageInput,
 } from "@lekoarts/themes-utils"
 import CopyButton from "../copy-button"
-import { lightTheme, darkTheme } from "../../utils/prism-themes"
+import { lightTheme, darkTheme } from "../../util/prism-themes"
 import LazyHighlight from "../lazy-high-light"
 
 type CodeProps = {

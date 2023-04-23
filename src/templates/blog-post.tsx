@@ -5,6 +5,16 @@ import MdxComponents from "../components/mdx-components"
 import { Box, Heading, jsx, Text } from "theme-ui"
 import { codeStyles } from "../styles/code"
 import Layout from "../layout"
+import { SocialShare } from "../components/social-share"
+import { SponsorButton } from "../components/sponsor-button"
+import { RevueButton } from "../components/revue-button"
+import LineBox from "../components/line-box"
+import BioBox from "../components/bio-box"
+import { PostNavigator } from "../components/post-navigator"
+import { Utterances } from "../components/utterances"
+import { useEffect } from "react"
+import * as ScrollManager from "../util/scroll"
+import * as React from "react"
 
 const timeBlockStyle = {
   fontSize: "sm",
@@ -16,10 +26,23 @@ const BlogPost: React.FC<React.PropsWithChildren<PageProps<any>>> = ({
   children,
   ...props
 }) => {
+  useEffect(() => {
+    ScrollManager.init()
+    return () => ScrollManager.destroy()
+  }, [])
   const { pageContext, data } = props as any
-  const siteTitle = data?.site?.siteMetadata?.title
+  const {
+    title: siteTitle,
+    author,
+    comment,
+
+    sponsor,
+    revueId,
+  } = data?.site?.siteMetadata
+  const { utterances } = comment
   const { date } = pageContext
   const { title } = pageContext.frontmatter
+  const post = data.markdownRemark
   return (
     <Layout location={props.location} title={siteTitle}>
       <MDXProvider components={MdxComponents}>
@@ -33,6 +56,18 @@ const BlogPost: React.FC<React.PropsWithChildren<PageProps<any>>> = ({
           </section>
         </Box>
       </MDXProvider>
+
+      <SocialShare title={siteTitle} author={author} />
+      <div sx={{ display: "flex", justifyContent: "flex-end" }}>
+        {!!sponsor.buyMeACoffeeId && (
+          <SponsorButton sponsorId={sponsor.buyMeACoffeeId} />
+        )}
+        {revueId != null ? <RevueButton revueId={revueId} /> : null}
+      </div>
+      <LineBox />
+      <BioBox />
+      <PostNavigator pageContext={pageContext} />
+      {!!utterances && <Utterances repo={utterances} />}
     </Layout>
   )
 }
@@ -44,9 +79,16 @@ export const query = graphql`
     site {
       siteMetadata {
         title
-        configs {
-          countOfInitialPost
+        author
+        siteUrl
+        comment {
+          disqusShortName
+          utterances
         }
+        sponsor {
+          buyMeACoffeeId
+        }
+        revueId
       }
     }
     mdx(fields: { slug: { eq: $slug } }) {

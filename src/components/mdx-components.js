@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Text } from "theme-ui"
-import { preToCodeBlock } from "../utils"
+import { preToCodeBlock } from "../util"
 import CodeBlock from "./code-block"
 import TitleBlock from "./title-block"
 
