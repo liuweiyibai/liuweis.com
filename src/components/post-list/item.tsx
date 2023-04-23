@@ -2,7 +2,7 @@
 import { jsx, Box, Flex } from "theme-ui"
 import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { motion, usePresence, MotionProps } from "framer-motion"
+import { motion, usePresence, MotionProps, useWillChange } from "framer-motion"
 
 type BlogListItemProps = {
   post: {
@@ -19,13 +19,13 @@ type BlogListItemProps = {
       }
     }
   }
-  showTags?: boolean
 }
 
 const transition = { type: "spring", stiffness: 500, damping: 50, mass: 1 }
 
-const BlogListItem = ({ post, showTags = true }: BlogListItemProps) => {
+const BlogListItem = ({ post }: BlogListItemProps) => {
   const [isPresent, safeToRemove] = usePresence()
+  const willChange = useWillChange()
   const animations: MotionProps = {
     layout: true,
     initial: "out",
@@ -46,7 +46,7 @@ const BlogListItem = ({ post, showTags = true }: BlogListItemProps) => {
   const image = getImage(post.node.frontmatter?.thumbnail)
   const title = post.node.frontmatter.title
   return (
-    <motion.h2 {...animations}>
+    <motion.h2 {...animations} style={{ willChange }}>
       <Flex mb={4} sx={{ alignItems: "center" }}>
         {image && <GatsbyImage sx={{ mr: 2 }} image={image} alt={title} />}
         <Box>

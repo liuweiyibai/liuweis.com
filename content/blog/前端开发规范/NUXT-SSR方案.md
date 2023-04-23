@@ -1,6 +1,7 @@
 ---
 title: NUXT-SSR 方案
 date: 2021-09-26 19:48:20
+thumbnail: '../../assets/thumbnails/nuxt.png'
 category:
   - 开发规范
 ---
