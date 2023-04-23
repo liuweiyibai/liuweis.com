@@ -1,6 +1,7 @@
 ---
 title: 异步编程模型 Promise
 date: 2021-10-04 17:13:16
+thumbnail: '../../../assets/thumbnails/js.png'
 category:
   - JavaScript
 ---

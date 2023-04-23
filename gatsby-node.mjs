@@ -11,7 +11,7 @@ export const createPages = ({ graphql, actions }) => {
         allMdx(
           limit: 1000
           sort: { frontmatter: { date: DESC } }
-          filter: { frontmatter: { draft: { eq: false } } }
+          filter: { frontmatter: { draft: { ne: true } } }
         ) {
           edges {
             node {

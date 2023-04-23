@@ -97,6 +97,11 @@ export const codeStyles: ThemeUICSSObject = {
       background: `#61dafb`,
       color: `black`,
     },
+    'pre[class~="language-vue"]:before': {
+      content: `"vue"`,
+      background: `rgb(66, 184, 131)`,
+      color: `#fff`,
+    },
     'pre[class~="language-ts"]:before': {
       content: `"ts"`,
       background: `#61dafb`,
