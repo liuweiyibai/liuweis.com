@@ -48,7 +48,8 @@ const theme = merge(tailwind, {
   },
   fonts: {
     body: `'LXGW WenKai', -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"`,
-    code: `ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;`,
+    // code: `ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;`,
+    code: "SFMono-Regular,Menlo,Consolas,Liberation Mono,Courier,monospace",
   },
   styles: {
     root: {

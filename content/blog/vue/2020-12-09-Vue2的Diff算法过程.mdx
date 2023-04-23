@@ -51,10 +51,10 @@ var vnode = {
   el: div,
 
   // 节点的标签
-  tagName: 'DIV',
+  tagName: "DIV",
 
   // 节点的选择器
-  sel: 'div#v.classA',
+  sel: "div#v.classA",
 
   // 一个存储节点属性的对象，对应节点的el[prop]属性，例如onclick , style
   data: null,
@@ -172,7 +172,7 @@ function patchVnode(oldVnode, vnode) {
 ```
 
 1. 取得 oldvnode.el 的父节点，parentEle 是真实 DOM
-2. createEle(vnode)会为 VNode 创建它的真实 dom，令 vnode.el = 真实 DOM
+2. `createEle(vnode)` 会为 `VNode` 创建它的真实 `dom`，令 `vnode.el = 真实 DOM`
 3. parentEle 将新的 DOM 插入，移除旧的 DOM
    当不值得比较时，新节点直接把老节点整个替换了
 
@@ -180,13 +180,13 @@ function patchVnode(oldVnode, vnode) {
 
 虽然这两个节点不一样但是他们的子节点一样怎么办？别忘了，Diff 可是逐层比较的，如果第一层不一样那么就不会继续深入比较第二层了。
 
-patch 最后会返回 VNode，VNode 和进入 patch 之前的不同在哪？就是 vnode.el，唯一的改变就是之前 vnode.el = null, 而现在它引用的是对应的真实 DOM。至此完成一个 patch 过程。
+patch 最后会返回 VNode，VNode 和进入 patch 之前的不同在哪？就是 vnode.el，唯一的改变就是之前 `vnode.el = null`, 而现在它引用的是对应的真实 DOM。至此完成一个 patch 过程。
 
 ## updateChildren 函数
 
-这个函数将 Vnode 的子节点 newCh 和 oldVnode 的子节点 oldCh 提取出来；oldCh 和 newCh 各有两个头尾的变量 StartIdx 和 EndIdx ，它们的 2 个变量相互比较，一共有 4 种比较方式。如果 4 种比较都没匹配，如果设置了 key ，就会用 key 进行比较，在比较的过程中，变量会往中间靠，一旦 StartIdx>EndIdx 表明 oldCh 和 newCh 至少有一个已经遍历完了，就会结束比较。
+这个函数将 Vnode 的子节点 newCh 和 oldVnode 的子节点 oldCh 提取出来；oldCh 和 newCh 各有两个头尾的变量 StartIdx 和 EndIdx ，它们的 2 个变量相互比较，一共有 4 种比较方式。如果 4 种比较都没匹配，如果设置了 key ，就会用 key 进行比较，在比较的过程中，变量会往中间靠，一旦 `StartIdx>EndIdx` 表明 oldCh 和 newCh 至少有一个已经遍历完了，就会结束比较。
 
-新旧两个 VNode 节点的左右头尾两侧均有一个变量标识，在遍历过程中这几个变量都会向中间靠拢。当 oldStartIdx <= oldEndIdx 或者 newStartIdx <= newEndIdx 时结束循环。在遍历中，如果存在 key，并且满足 sameVnode，会将该 DOM 节点进行复用(只通过移动节点顺序)，否则则会创建一个新的 DOM 节点。
+新旧两个 VNode 节点的左右头尾两侧均有一个变量标识，在遍历过程中这几个变量都会向中间靠拢。当 `oldStartIdx <= oldEndIdx` 或者 `newStartIdx <= newEndIdx` 时结束循环。在遍历中，如果存在 key，并且满足 sameVnode，会将该 DOM 节点进行复用(只通过移动节点顺序)，否则则会创建一个新的 DOM 节点。
 
 ```js
 /**
@@ -303,8 +303,6 @@ function updateChildren(parentElm, oldCh, newCh) {
 ```
 
 这里有一段模拟了 diff 过程的代码，可以 debugger 调试一下 [diff 过程](https://codepen.io/hotblin/pen/rNwLqMy?editors=0012)，加深理解：
-
- 
 
 ## 总结
 
