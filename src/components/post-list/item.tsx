@@ -46,16 +46,18 @@ const BlogListItem = ({ post }: BlogListItemProps) => {
   const image = getImage(post.node.frontmatter?.thumbnail)
   const title = post.node.frontmatter.title
   return (
-    <motion.h2 {...animations} style={{ willChange }}>
+    <motion.div {...animations} style={{ willChange }}>
       <Flex mb={4} sx={{ alignItems: "center" }}>
-        {image && <GatsbyImage sx={{ mr: 2 }} image={image} alt={title} />}
-        <Box>
+        {image && <GatsbyImage sx={{ mr: 3 }} image={image} alt={title} />}
+        <Box sx={{ pt: 2, pb: 2 }}>
           <Link
             to={post.node.fields.slug}
             sx={(t) => ({
               ...t.styles?.a,
               fontSize: ["lg", "xl", "2xl"],
               color: `text`,
+              mb: 1,
+              display: "block",
             })}
           >
             {title}
@@ -64,7 +66,6 @@ const BlogListItem = ({ post }: BlogListItemProps) => {
             sx={{
               color: `secondary`,
               m: 0,
-              mt: 1,
               a: { color: `secondary` },
               fontSize: ["xs", "sm", "default"],
             }}
@@ -73,7 +74,7 @@ const BlogListItem = ({ post }: BlogListItemProps) => {
           </p>
         </Box>
       </Flex>
-    </motion.h2>
+    </motion.div>
   )
 }
 
