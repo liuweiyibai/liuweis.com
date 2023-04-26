@@ -1,8 +1,9 @@
 ---
 title: JavaScript 常用工具方法
+date: 2019-09-17 09:48:00
+thumbnail: "../../assets/thumbnails/js.png"
 category:
   - JavaScript
-date: 2019-09-17 09:48:00
 ---
 
 ## 正则验证部分

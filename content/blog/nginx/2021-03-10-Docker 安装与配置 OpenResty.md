@@ -1,6 +1,7 @@
 ---
 title: Docker 安装与配置 OpenResty
 date: 2021-03-10 13:54:47
+thumbnail: "../../assets/thumbnails/nginx.png"
 category:
   - Docker
   - OpenResty

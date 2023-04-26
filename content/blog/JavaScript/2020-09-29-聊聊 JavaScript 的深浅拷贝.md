@@ -1,6 +1,7 @@
 ---
 title: 聊聊 JavaScript 的深浅拷贝
 date: 2020-09-29 21:12:40
+thumbnail: "../../assets/thumbnails/js.png"
 category:
   - JavaScript
 ---

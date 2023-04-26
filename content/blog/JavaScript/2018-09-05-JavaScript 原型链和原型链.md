@@ -1,6 +1,7 @@
 ---
 title: JavaScript 原型链和原型链
 date: 2018-09-05 12:20:10
+thumbnail: "../../assets/thumbnails/js.png"
 category:
   - JavaScript
 ---

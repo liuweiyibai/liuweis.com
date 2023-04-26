@@ -1,6 +1,7 @@
 ---
 title: 精彩的 JavaScript 开源库
 date: 2019-12-14 12:09:00
+thumbnail: "../../assets/thumbnails/js.png"
 category:
   - 前端工具
   - JavaScript

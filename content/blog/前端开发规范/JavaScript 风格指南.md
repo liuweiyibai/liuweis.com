@@ -1,6 +1,7 @@
 ---
 title: JavaScript 风格指南
 date: 2021-09-26 19:48:20
+thumbnail: "../../assets/thumbnails/js.png"
 category:
   - 开发规范
 ---

@@ -1,11 +1,11 @@
 import remarkGfm from "remark-gfm"
 import rehypeMetaAsAttributes from "@lekoarts/rehype-meta-as-attributes"
 import metaConfig from "./config/meta.mjs"
+import { getAllMdx } from "./config/graphql.mjs"
 
 export default {
   siteMetadata: metaConfig,
   plugins: [
-    `gatsby-plugin-sass`,
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -19,17 +19,18 @@ export default {
     "gatsby-plugin-image",
     "gatsby-transformer-sharp",
 
-    // {
-    //   resolve: "gatsby-plugin-manifest",
-    //   options: {
-    //     name: "Gatsby Starter Contentful Homepage",
-    //     short_name: "Gatsby",
-    //     start_url: "/",
-    //     background_color: "#ffe491",
-    //     theme_color: "#004ca3",
-    //     icon: "src/favicon.png",
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: metaConfig.title,
+        short_name: metaConfig.title,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#ffffff`,
+        display: `minimal-ui`,
+        icon: metaConfig.icon,
+      },
+    },
 
     {
       resolve: `gatsby-plugin-mdx`,
@@ -88,5 +89,46 @@ export default {
         headerHeight: 0,
       },
     },
+
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.nodes.map((node) => {
+                return Object.assign({}, node.frontmatter, {
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + node.fields.slug,
+                  custom_elements: [{ "content:encoded": node.html }],
+                })
+              })
+            },
+            query: getAllMdx,
+            output: "/rss.xml",
+            title: metaConfig.title,
+            match: "^/",
+            link: metaConfig.siteUrl,
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-sass`,
   ],
 }

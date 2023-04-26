@@ -1,6 +1,7 @@
 ---
 title: JavaScript 判断手机品牌
 date: 2019-06-14 16:20:00
+thumbnail: "../../assets/thumbnails/js.png"
 category:
   - JavaScript
   - HTML5

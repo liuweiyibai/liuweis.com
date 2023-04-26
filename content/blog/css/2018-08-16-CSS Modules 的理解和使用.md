@@ -1,6 +1,7 @@
 ---
 title: CSS Modules 的理解和使用
 date: 2018-08-16 02:20:20
+thumbnail: "../../assets/thumbnails/css3.png"
 category:
   - CSS
   - PostCSS

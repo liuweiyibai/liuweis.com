@@ -1,6 +1,7 @@
 ---
 title: 关于 CSSHoudini
 date: 2020-01-10 17:56:00
+thumbnail: "../../assets/thumbnails/css3.png"
 category:
   - CSS
   - CSS3

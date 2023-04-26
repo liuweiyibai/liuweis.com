@@ -4,6 +4,7 @@ date: 2018-03-09 14:18:16
 category:
   - SCSS
   - CSS
+thumbnail: "../../assets/thumbnails/css3.png"
 ---
 
 ## 前言
@@ -154,7 +155,7 @@ $paramer: 3;
   //each 语法
   @each $img in q, w, e, r {
     .#{$img} {
-      background-image: url('#{$img}.png');
+      background-image: url("#{$img}.png");
     }
   }
   ```
@@ -187,7 +188,7 @@ SCSS 是 `CSS` 的预处理语言，它给予 `CSS` 变量以及函数条件判�
   .clear {
     *zoom: 1;
     &:after: {
-      content: '';
+      content: "";
       display: table;
       clear: both;
     }
@@ -278,7 +279,7 @@ SCSS 是 `CSS` 的预处理语言，它给予 `CSS` 变量以及函数条件判�
 - 输入框和文本域
 
   ```scss
-  input[type='text'],
+  input[type="text"],
   textarea {
     padding: 6px;
     border-radius: 2px;
@@ -420,7 +421,7 @@ SCSS 是 `CSS` 的预处理语言，它给予 `CSS` 变量以及函数条件判�
     }
     &:before,
     &:after {
-      content: '';
+      content: "";
       display: table;
     }
     &:after {

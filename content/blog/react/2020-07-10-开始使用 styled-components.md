@@ -1,6 +1,7 @@
 ---
 title: 开始使用 styled-components
 date: 2020-07-10 14:49:33
+thumbnail: "../../assets/thumbnails/react.png"
 category:
   - React
   - Gatsby

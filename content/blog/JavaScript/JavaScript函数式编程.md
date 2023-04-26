@@ -1,6 +1,7 @@
 ---
 title: 函数式编程
 date: 2018-12-30 20:53:58
+thumbnail: "../../assets/thumbnails/js.png"
 category:
   - 函数式编程
   - JavaScript

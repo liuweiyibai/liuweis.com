@@ -13,11 +13,6 @@ export default {
   },
   icon: `content/assets/favicon.webp`,
   thumbnail: `https://liuweis.com/lwyb-me.jpeg`,
-  // resume: {
-  //   title: "About Me",
-  //   description: "docs: Update RESUME.md for introducing myself",
-  //   thumbnail: "https://liuweis.com/about_thumbnail.png",
-  // },
   keywords: [
     `blog`,
     `javascript`,

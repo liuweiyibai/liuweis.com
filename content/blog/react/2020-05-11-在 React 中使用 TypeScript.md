@@ -1,6 +1,7 @@
 ---
 title: 在 React 中使用 TypeScript
 date: 2020-05-11 15:35:25
+thumbnail: "../../assets/thumbnails/react.png"
 category:
   - React
   - TypeScript

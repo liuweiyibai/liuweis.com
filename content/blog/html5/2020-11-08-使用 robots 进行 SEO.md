@@ -1,6 +1,7 @@
 ---
 title: 使用 robots 进行 SEO
 date: 2020-11-08 14:05:04
+thumbnail: "../../assets/thumbnails/html5.png"
 category:
   - HTML
 ---

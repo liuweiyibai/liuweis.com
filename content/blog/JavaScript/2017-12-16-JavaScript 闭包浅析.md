@@ -1,6 +1,7 @@
 ---
 title: JavaScript 闭包浅析
 date: 2017-12-16 14:18:16
+thumbnail: "../../assets/thumbnails/js.png"
 category:
   - JavaScript
 ---

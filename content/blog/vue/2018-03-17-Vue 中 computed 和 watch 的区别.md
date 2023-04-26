@@ -1,8 +1,9 @@
 ---
 title: Vue 中 computed 和 watch 的区别
+date: 2018-03-17 22:13:45
+thumbnail: "../../assets/thumbnails/vue.png"
 category:
   - Vue
-date: 2018-03-17 22:13:45
 ---
 
 computed 和 watch 都可以观察页面的数据变化。当处理页面的数据变化时，我们有时候很容易滥用 watch。 而通常更好的办法是使用 computed 属性，而不是命令是的 watch 回调。

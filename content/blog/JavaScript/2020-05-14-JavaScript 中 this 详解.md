@@ -1,6 +1,7 @@
 ---
 title: JavaScript 中 this 详解
 date: 2020-05-14 09:48:00
+thumbnail: "../../assets/thumbnails/js.png"
 category:
   - JavaScript
 ---

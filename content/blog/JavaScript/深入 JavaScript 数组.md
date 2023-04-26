@@ -1,6 +1,7 @@
 ---
 title: 深入 JavaScript 数组
 date: 2019-10-07 14:08:23
+thumbnail: "../../assets/thumbnails/js.png"
 category:
   - JavaScript
 ---

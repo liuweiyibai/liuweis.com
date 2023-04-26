@@ -1,6 +1,7 @@
 ---
 title: JavaScript 模块化历史
 date: 2018-07-22 10:46:00
+thumbnail: "../../assets/thumbnails/js.png"
 category:
   - JavaScript
 ---

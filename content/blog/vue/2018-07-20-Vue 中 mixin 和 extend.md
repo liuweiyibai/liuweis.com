@@ -1,8 +1,9 @@
 ---
 title: Vue 中 mixin 和 extend
+date: 2018-07-20 12:11:55
+thumbnail: "../../assets/thumbnails/vue.png"
 category:
   - Vue
-date: 2018-07-20 12:11:55
 ---
 
 ## mixin

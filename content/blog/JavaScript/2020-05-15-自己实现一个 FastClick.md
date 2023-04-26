@@ -1,6 +1,7 @@
 ---
 title: 自己实现一个 FastClick
 date: 2020-05-14 09:48:00
+thumbnail: "../../assets/thumbnails/js.png"
 category:
   - JavaScript
 ---

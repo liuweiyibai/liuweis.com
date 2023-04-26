@@ -1,6 +1,7 @@
 ---
 title: JavaScript 变量提升和作用域
 date: 2017-06-28 14:18:16
+thumbnail: "../../assets/thumbnails/js.png"
 category:
   - JavaScript
 ---

@@ -1,6 +1,7 @@
 ---
 title: Vue 项目目录结构
 date: 2021-09-26 19:48:20
+thumbnail: "../../assets/thumbnails/vue.png"
 category:
   - 开发规范
 ---

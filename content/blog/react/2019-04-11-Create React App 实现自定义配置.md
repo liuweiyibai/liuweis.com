@@ -1,10 +1,10 @@
 ---
 title: Create React App 实现自定义配置
 date: 2019-04-11 22:10:00
+thumbnail: "../../assets/thumbnails/react.png"
 category:
   - React
   - Create React App
-thumbnail: './images/RE4wB7a.jpeg'
 draft: false
 ---
 

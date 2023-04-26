@@ -1,6 +1,7 @@
 ---
 title: 总结一下 HTML5 中的 manifest 文件
 date: 2019-08-30 18:00:28
+thumbnail: "../../assets/thumbnails/html5.png"
 category:
   - HTML5
   - Webpack

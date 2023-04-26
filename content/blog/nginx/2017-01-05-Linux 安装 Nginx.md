@@ -1,6 +1,7 @@
 ---
 title: Linux 安装 Nginx
 date: 2017-01-05 12:00:00
+thumbnail: "../../assets/thumbnails/nginx.png"
 category:
   - Linux
   - Nginx

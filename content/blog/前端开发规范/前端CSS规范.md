@@ -1,6 +1,7 @@
 ---
 title: 前端 CSS 规范
 date: 2021-09-26 19:48:20
+thumbnail: "../../assets/thumbnails/css.png"
 category:
   - 开发规范
 ---

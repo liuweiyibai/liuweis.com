@@ -1,6 +1,7 @@
 ---
 title: 深入理解 JavaScript 函数
 date: 2019-02-06 17:27:06
+thumbnail: "../../assets/thumbnails/js.png"
 category:
   - JavaScript
   - ECMAScript6

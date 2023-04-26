@@ -1,6 +1,7 @@
 ---
 title: 使用 OpenResty 完成日志实时采集
 date: 2021-03-14 21:29:40
+thumbnail: "../../assets/thumbnails/nginx.png"
 category:
   - OpenResty
   - Nginx
