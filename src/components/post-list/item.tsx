@@ -54,7 +54,7 @@ const BlogListItem = ({ post }: BlogListItemProps) => {
             to={post.node.fields.slug}
             sx={(t) => ({
               ...t.styles?.a,
-              fontSize: ["sm", "default", "2xl"],
+              fontSize: ["lg", "xl", "2xl"],
               color: `text`,
             })}
           >
@@ -63,9 +63,10 @@ const BlogListItem = ({ post }: BlogListItemProps) => {
           <p
             sx={{
               color: `secondary`,
+              m: 0,
               mt: 1,
               a: { color: `secondary` },
-              fontSize: [1, 1, 2],
+              fontSize: ["xs", "sm", "default"],
             }}
           >
             <time>{post.node.frontmatter.date}</time>

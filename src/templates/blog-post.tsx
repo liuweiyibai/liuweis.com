@@ -35,14 +35,12 @@ const BlogPost: React.FC<React.PropsWithChildren<PageProps<any>>> = ({
     title: siteTitle,
     author,
     comment,
-
     sponsor,
     revueId,
   } = data?.site?.siteMetadata
   const { utterances } = comment
-  const { date } = pageContext
+  const { date } = data.mdx.frontmatter
   const { title } = pageContext.frontmatter
-  const post = data.markdownRemark
   return (
     <Layout location={props.location} title={siteTitle}>
       <MDXProvider components={MdxComponents}>
@@ -97,7 +95,7 @@ export const query = graphql`
         slug
       }
       frontmatter {
-        title
+        date(formatString: "YYYY/MM/DD HH:mm")
       }
     }
   }
