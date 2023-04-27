@@ -1,0 +1,102 @@
+.background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 1900px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+[class^="background__"] {
+  &::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+  }
+}
+
+.background__blue,
+.background__red {
+  position: absolute;
+  height: 10px;
+  opacity: 0.1;
+  transform: rotate(-18deg);
+}
+
+.background__blue {
+  top: 100px;
+  left: -30px;
+  width: 800px;
+  &::before {
+    background-color: #6fcbdd;
+    animation: width 2s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+}
+
+.background__red {
+  top: 170px;
+  left: -50px;
+  width: 1250px;
+  &::before {
+    background-color: #e11665;
+    animation: width 4s ease-in;
+    animation-fill-mode: forwards;
+  }
+}
+
+.background__green,
+.background__yellow {
+  position: absolute;
+  top: -100px;
+  width: 10px;
+  height: 2100px;
+  opacity: 0.1;
+  transform: rotate(-18deg);
+  &::before {
+    height: 0;
+    width: 100%;
+  }
+}
+
+.background__green {
+  left: 320px;
+  &::before {
+    height: 100%;
+    background-color: #38ba91;
+    animation: height 6s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+}
+
+.background__yellow {
+  left: 450px;
+  &::before {
+    height: 100%;
+    background-color: #eaa822;
+    animation: height 8s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes width {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes height {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}

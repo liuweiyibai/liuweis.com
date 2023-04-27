@@ -7,6 +7,7 @@ import ThemeSwitcher from "../components/theme-switcher"
 import { TitleBox } from "./title-box"
 import FooterCopyright from "../components/footer-copyright"
 import HeadTag from "../components/head-tag"
+import Background from "../components/background"
 
 type LayoutProps = {
   children: React.ReactNode
@@ -33,6 +34,7 @@ const Layout = ({ children, className = ``, ...props }: LayoutProps) => {
         {children}
       </Container>
       <FooterCopyright />
+      <Background />
     </React.Fragment>
   )
 }
