@@ -24,7 +24,7 @@ type HeadTagProps = {
 }
 const HeadTag = ({
   description,
-  lang = "zh",
+  lang = "zh_Hans",
   meta = [],
   keywords = [],
   title,

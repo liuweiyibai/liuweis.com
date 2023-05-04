@@ -42,7 +42,7 @@ const BlogPost: React.FC<React.PropsWithChildren<PageProps<any>>> = ({
   const { date } = data.mdx.frontmatter
   const { title } = pageContext.frontmatter
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Layout location={props.location} title={title}>
       <MDXProvider components={MdxComponents}>
         <Box as="main" sx={codeStyles}>
           <Heading as="h1" variant="styles.h1" sx={{ fontWeight: 900, mb: 3 }}>
