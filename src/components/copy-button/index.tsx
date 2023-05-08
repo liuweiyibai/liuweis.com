@@ -2,6 +2,7 @@
 import { jsx } from "theme-ui"
 import { useState } from "react"
 import { visuallyHidden } from "../../styles/code"
+import confetti from "canvas-confetti"
 
 const copyToClipboard = (str) => {
   const { clipboard } = window.navigator
@@ -65,6 +66,11 @@ const Copy = ({
       sx={{ variant: `copyButton` }}
       onClick={async () => {
         await copyToClipboard(trim ? content.trim() : content)
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 },
+        })
         setCopied(true)
         await delay(duration)
         setCopied(false)

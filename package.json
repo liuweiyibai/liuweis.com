@@ -21,6 +21,7 @@
     "@theme-ui/color": "~0.15.3",
     "@theme-ui/mdx": "^0.15.7",
     "@theme-ui/preset-tailwind": "^0.15.7",
+    "canvas-confetti": "^1.6.0",
     "framer-motion": "^10.12.4",
     "gatsby": "^5.0.0",
     "gatsby-plugin-emotion": "^8.9.0",
@@ -64,6 +65,7 @@
     "theme-ui": "^0.15.7"
   },
   "devDependencies": {
+    "@types/canvas-confetti": "^1.6.0",
     "chalk": "4",
     "husky": "^7.0.4",
     "inquirer": "^8.2.0",
