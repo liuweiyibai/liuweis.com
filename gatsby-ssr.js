@@ -1,4 +1,5 @@
 const React = require("react")
+const BackGround = require("./src/components/background")
 
 exports.onRenderBody = ({
   setHeadComponents,
@@ -30,4 +31,13 @@ exports.onRenderBody = ({
   setPostBodyComponents([
     <script src="/scripts/preloader.js" key="script-preloader" />,
   ])
+}
+
+exports.wrapPageElement = ({ element, props }) => {
+  return (
+    <>
+      {element}
+      <BackGround />
+    </>
+  )
 }
