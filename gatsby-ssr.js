@@ -33,11 +33,11 @@ exports.onRenderBody = ({
   ])
 }
 
-exports.wrapPageElement = ({ element, props }) => {
-  return (
-    <>
-      {element}
-      <BackGround />
-    </>
-  )
-}
+// exports.wrapPageElement = ({ element, props }) => {
+//   return (
+//     <>
+//       {element}
+//       <BackGround />
+//     </>
+//   )
+// }
