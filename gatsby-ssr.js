@@ -1,5 +1,4 @@
 const React = require("react")
-const BackGround = require("./src/components/background")
 
 exports.onRenderBody = ({
   setHeadComponents,
@@ -20,10 +19,10 @@ exports.onRenderBody = ({
   ])
   setPreBodyComponents([
     <div id="preloader" key="preloader">
-      <div className="contain">
-        <div className="second"></div>
-        <div className="third"></div>
-        <div className="text">Loading...</div>
+      <div className="loader">
+        <span className="dot_1"></span>
+        <span className="dot_2"></span>
+        <span className="dot_3"></span>
       </div>
     </div>,
   ])
@@ -32,12 +31,3 @@ exports.onRenderBody = ({
     <script src="/scripts/preloader.js" key="script-preloader" />,
   ])
 }
-
-// exports.wrapPageElement = ({ element, props }) => {
-//   return (
-//     <>
-//       {element}
-//       <BackGround />
-//     </>
-//   )
-// }
