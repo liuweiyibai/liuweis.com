@@ -33,7 +33,6 @@ const Layout = ({ children, className = ``, ...props }: LayoutProps) => {
         {children}
       </Container>
       <FooterCopyright />
-      {/* <Background /> */}
     </React.Fragment>
   )
 }
