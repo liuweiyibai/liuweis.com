@@ -41,6 +41,10 @@ category:
 
 - [Luckysheet](https://github.com/mengshukeji/Luckysheet/blob/master/README-zh.md)
 
-
 ## 滚动条
+
 - [OverlayScrollbars](https://github.com/KingSora/OverlayScrollbars)
+
+## 动画实现方案
+
+- [auto-animate](https://auto-animate.formkit.com/#installation)
